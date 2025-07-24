@@ -375,30 +375,30 @@ void runProducedCar()
 
 void testProducedCar()
 {
-    if (carType == SEDAN_T && brakeSystem == CONTINENTAL_B)
+    if (isValidCheck() == false)
     {
         printf_s("자동차 부품 조합 테스트 결과 : FAIL\n");
-        printf_s("SEDAN_T에는 Continental제동장치 사용 불가\n");
-    }
-    else if (carType == SUV_T && engine == TOYOTA_E)
-    {
-        printf_s("자동차 부품 조합 테스트 결과 : FAIL\n");
-        printf_s("SUV_T에는 TOYOTA엔진 사용 불가\n");
-    }
-    else if (carType == TRUCK_T && engine == WIA_E)
-    {
-        printf_s("자동차 부품 조합 테스트 결과 : FAIL\n");
-        printf_s("TRUCK_T에는 WIA엔진 사용 불가\n");
-    }
-    else if (carType == TRUCK_T && brakeSystem == MANDO_B)
-    {
-        printf_s("자동차 부품 조합 테스트 결과 : FAIL\n");
-        printf_s("TRUCK_T에는 Mando제동장치 사용 불가\n");
-    }
-    else if (brakeSystem == BOSCH_B && steeringSystem != BOSCH_S)
-    {
-        printf_s("자동차 부품 조합 테스트 결과 : FAIL\n");
-        printf_s("Bosch제동장치에는 Bosch조향장치 이외 사용 불가\n");
+
+        if (carType == SEDAN_T && brakeSystem == CONTINENTAL_B)
+        {
+            printf_s("SEDAN_T에는 Continental제동장치 사용 불가\n");
+        }
+        else if (carType == SUV_T && engine == TOYOTA_E)
+        {
+            printf_s("SUV_T에는 TOYOTA엔진 사용 불가\n");
+        }
+        else if (carType == TRUCK_T && engine == WIA_E)
+        {
+            printf_s("TRUCK_T에는 WIA엔진 사용 불가\n");
+        }
+        else if (carType == TRUCK_T && brakeSystem == MANDO_B)
+        {
+            printf_s("TRUCK_T에는 Mando제동장치 사용 불가\n");
+        }
+        else if (brakeSystem == BOSCH_B && steeringSystem != BOSCH_S)
+        {
+            printf_s("Bosch제동장치에는 Bosch조향장치 이외 사용 불가\n");
+        }
     }
     else
     {
